@@ -13,6 +13,9 @@
     "node": ">=7"
   },
   "scripts": {
+    "clean": "rimraf **/*.js",
+    "prebuild": "npm run clean",
+    "build": "tsc",
     "test": "echo \"No tests configured\"",
     "pretest": "npm run lint",
     "postinstall": "alfy-init",
@@ -33,11 +36,13 @@
   "dependencies": {
     "alfy": "^0.6.0",
     "semantic-release": "^11.0.2",
+    "tslib": "^1.8.1",
     "typescript": "^2.6.2"
   },
   "devDependencies": {
     "alfy-test": "^0.3.0",
-    "tslint": "^5.9.1",
-    "semantic-release": "^11.0.2"
+    "rimraf": "^2.6.2",
+    "semantic-release": "^11.0.2",
+    "tslint": "^5.9.1"
   }
 }
