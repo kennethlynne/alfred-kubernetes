@@ -37,9 +37,11 @@
     "alfy"
   ],
   "dependencies": {
+    "@types/shelljs": "^0.7.7",
     "alfred-notifier": "^0.2.3",
     "alfy": "^0.6.0",
-    "semantic-release": "^11.0.2",
+    "kubernetes-client": "^3.17.2",
+    "shelljs": "^0.8.0",
     "tslib": "1.8.0",
     "typescript": "2.6.2"
   },

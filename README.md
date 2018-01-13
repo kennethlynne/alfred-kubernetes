@@ -10,11 +10,20 @@ $ npm install --global alfred-kubernetes
 ```
 
 *Requires [Node.js](https://nodejs.org) 7+ and the Alfred [Powerpack](https://www.alfredapp.com/powerpack/).*
-
+*Requires that Kubernetes is already installed and configured (uses kubectl behind the scenes) *
 
 ## Usage
 
-TODO
+```
+portforward <name of pod> <port>
+```
+Will port forward a pod on a designated port
+
+![portforward name port](screenshots/portforward1.png "Port forward a pod on a designated port")
+
+Will open terminal and forward the pods port
+
+![portforward name port](screenshots/portforward2.png "Port forward a pod on a designated port")
 
 ## License
 

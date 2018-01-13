@@ -1,13 +1,12 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "es5",
+    "target": "es2015",
     "declaration": true,
     "importHelpers": true,
     "noImplicitAny": false,
     "noEmitHelpers": true,
     "moduleResolution": "node",
-    "jsx": "react",
     "sourceMap": true,
     "allowJs": false,
     "lib": [
