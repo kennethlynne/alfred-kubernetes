@@ -4,6 +4,9 @@
   "description": "Alfred workflow to manage a kubernetes cluster",
   "license": "MIT",
   "repository": "kennethlynne/alfred-kubernetes",
+  "release": {
+    "verifyConditions": "condition-circle"
+  },
   "author": {
     "name": "Kenneth Lynne",
     "email": "kenneth.lynne@gmail.com",
