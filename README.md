@@ -1,4 +1,4 @@
-# alfred-kubernetes [![Build Status](https://travis-ci.org/kennethlynne/alfred-kubernetes.svg?branch=master)](https://travis-ci.org/kennethlynne/alfred-kubernetes)
+# alfred-kubernetes [![CircleCI](https://circleci.com/gh/kennethlynne/alfred-kubernetes/tree/master.svg?style=svg)](https://circleci.com/gh/kennethlynne/alfred-kubernetes/tree/master)
 
 > Alfred workflow to manage a kubernetes cluster
 
