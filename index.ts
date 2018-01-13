@@ -1,4 +1,7 @@
 const alfy = require('alfy');
+const alfredNotifier = require('alfred-notifier');
+
+alfredNotifier();
 
 alfy.output([
   {
