@@ -21,7 +21,7 @@ Will port forward a pod on a designated port
 
 ![portforward name port](screenshots/portforward1.png "Port forward a pod on a designated port")
 
-Will open terminal and forward the pods port
+Press enter (or tab to edit port) and it will forward the pod
 
 ![portforward name port](screenshots/portforward2.png "Port forward a pod on a designated port")
 
