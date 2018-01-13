@@ -1,6 +1,6 @@
 {
   "name": "alfred-kubernetes",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "description": "Alfred workflow to manage a kubernetes cluster",
   "license": "MIT",
   "repository": "kennethlynne/alfred-kubernetes",
@@ -17,7 +17,8 @@
     "pretest": "npm run lint",
     "postinstall": "alfy-init",
     "preuninstall": "alfy-cleanup",
-    "lint": "tslint -c tslint.json \"{**}/*.ts*\""
+    "lint": "tslint -c tslint.json \"{**}/*.ts*\"",
+    "semantic-release": "semantic-release"
   },
   "files": [
     "index.js",
@@ -31,10 +32,12 @@
   ],
   "dependencies": {
     "alfy": "^0.6.0",
+    "semantic-release": "^11.0.2",
     "typescript": "^2.6.2"
   },
   "devDependencies": {
     "alfy-test": "^0.3.0",
-    "tslint": "^5.9.1"
+    "tslint": "^5.9.1",
+    "semantic-release": "^11.0.2"
   }
 }
