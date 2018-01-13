@@ -6,11 +6,13 @@
 ## Install
 
 ```
-$ npm install --global alfred-kubernetes
+$ npm i -g alfred-kubernetes
 ```
 
-*Requires [Node.js](https://nodejs.org) 7+ and the Alfred [Powerpack](https://www.alfredapp.com/powerpack/).*
-*Requires that Kubernetes is already installed and configured (uses kubectl behind the scenes) *
+*Requirements:*
+ * [Node.js](https://nodejs.org) 7+
+ * Alfred [Powerpack](https://www.alfredapp.com/powerpack/)
+ * Kubernetes is already installed and configured (uses kubectl behind the scenes)
 
 ## Usage
 
