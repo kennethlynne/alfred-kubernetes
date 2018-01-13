@@ -1,0 +1,109 @@
+version: 2
+jobs:
+
+  danger:
+    docker:
+      - image: circleci/ruby:2.3
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      - run: gem install bundler
+      - run: bundle install
+      - run: git config user.name "CircleCI"
+      - run: git config user.email "circleci@edtechfoundry.com"
+      - run: bundle exec danger
+
+  lint:
+    docker:
+      - image: circleci/node:8
+
+        environment:
+          NODE_ENV: test
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+
+      - run: npm install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      - run: npm run lint
+
+  test:
+    docker:
+      - image: circleci/node:8
+
+        environment:
+          NODE_ENV: test
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+
+      - run: npm install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      - run: npm test
+
+  deploy:
+    docker:
+      - image: circleci/node:8
+
+        environment:
+          NODE_ENV: development
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+
+      - run: npm install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      - deploy:
+          name: Deploy to NPM
+          command: |
+            npm run build
+            npm run semantic-release || true
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - test
+      - lint
+      - danger
+      - deploy:
+          filters:
+            branches:
+              only:
+                - master

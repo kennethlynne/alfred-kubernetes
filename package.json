@@ -1,0 +1,40 @@
+{
+  "name": "alfred-kubernetes",
+  "version": "0.0.0",
+  "description": "Alfred workflow to manage a kubernetes cluster",
+  "license": "MIT",
+  "repository": "kennethlynne/alfred-kubernetes",
+  "author": {
+    "name": "Kenneth Lynne",
+    "email": "kenneth.lynne@gmail.com",
+    "url": "kenneth.ly"
+  },
+  "engines": {
+    "node": ">=7"
+  },
+  "scripts": {
+    "test": "echo \"No tests configured\"",
+    "pretest": "npm run lint",
+    "postinstall": "alfy-init",
+    "preuninstall": "alfy-cleanup",
+    "lint": "tslint -c tslint.json \"{**}/*.ts*\""
+  },
+  "files": [
+    "index.js",
+    "icon.png",
+    "info.plist"
+  ],
+  "keywords": [
+    "alfred",
+    "workflow",
+    "alfy"
+  ],
+  "dependencies": {
+    "alfy": "^0.6.0",
+    "typescript": "^2.6.2"
+  },
+  "devDependencies": {
+    "alfy-test": "^0.3.0",
+    "tslint": "^5.9.1"
+  }
+}
