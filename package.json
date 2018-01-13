@@ -13,7 +13,7 @@
     "node": ">=7"
   },
   "scripts": {
-    "clean": "rimraf **/*.js",
+    "clean": "rimraf *.js",
     "prebuild": "npm run clean",
     "build": "tsc",
     "test": "echo \"No tests configured\"",
@@ -36,7 +36,7 @@
   "dependencies": {
     "alfy": "^0.6.0",
     "semantic-release": "^11.0.2",
-    "tslib": "^1.8.0",
+    "tslib": "1.8.0",
     "typescript": "2.6.2"
   },
   "devDependencies": {
