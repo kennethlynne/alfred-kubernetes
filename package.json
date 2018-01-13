@@ -42,6 +42,7 @@
   "devDependencies": {
     "@types/node": "^9.3.0",
     "alfy-test": "^0.3.0",
+    "condition-circle": "^2.0.1",
     "rimraf": "^2.6.2",
     "semantic-release": "^11.0.2",
     "tslint": "^5.9.1"
