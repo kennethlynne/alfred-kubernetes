@@ -36,10 +36,11 @@
   "dependencies": {
     "alfy": "^0.6.0",
     "semantic-release": "^11.0.2",
-    "tslib": "^1.8.1",
-    "typescript": "^2.6.2"
+    "tslib": "^1.8.0",
+    "typescript": "2.6.2"
   },
   "devDependencies": {
+    "@types/node": "^9.3.0",
     "alfy-test": "^0.3.0",
     "rimraf": "^2.6.2",
     "semantic-release": "^11.0.2",
