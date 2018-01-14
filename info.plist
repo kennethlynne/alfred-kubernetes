@@ -21,11 +21,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>C150CA77-371A-46E6-A4E2-D2B7C6F1E31E</key>
+		<key>5F16E726-286B-46D8-B353-C5CCACB030FE</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>5F16E726-286B-46D8-B353-C5CCACB030FE</string>
+				<string>835189F0-5D36-49DA-894D-265D473813AF</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -33,9 +33,12 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+		</array>
+		<key>C150CA77-371A-46E6-A4E2-D2B7C6F1E31E</key>
+		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>835189F0-5D36-49DA-894D-265D473813AF</string>
+				<string>5F16E726-286B-46D8-B353-C5CCACB030FE</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -278,7 +281,7 @@ exit</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>kubectl config use-context {query}</string>
+				<string>/usr/local/bin/kubectl config use-context {query}</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -303,7 +306,7 @@ exit</string>
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string>"{query}" set as current context</string>
+				<string>{query}</string>
 				<key>title</key>
 				<string>Switched Kubernetes context</string>
 			</dict>
@@ -350,9 +353,9 @@ exit</string>
 		<key>835189F0-5D36-49DA-894D-265D473813AF</key>
 		<dict>
 			<key>xpos</key>
-			<integer>210</integer>
+			<integer>400</integer>
 			<key>ypos</key>
-			<integer>490</integer>
+			<integer>370</integer>
 		</dict>
 		<key>98CAE18C-05EB-447F-9F83-C7B3E18510FE</key>
 		<dict>
