@@ -278,7 +278,7 @@ exit</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string># kubectl config use-context {query}</string>
+				<string>kubectl config use-context {query}</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
