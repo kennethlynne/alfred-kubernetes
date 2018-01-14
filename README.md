@@ -37,6 +37,8 @@ context
 ```
 Will list available contexts and let you switch context
 
+![context](screenshots/context1.png "Switch contexts easily")
+
 ## License
 
 MIT © [Kenneth Lynne](http://kenneth.ly)
