@@ -8,11 +8,47 @@
 	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
+		<key>42332A16-989C-4658-A26D-F17131EA9D36</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6A9C202D-14CD-4369-929B-1948FBD6733B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>CD3190E5-4166-40FE-B0A3-047147A24BF1</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>01450581-90B1-427F-906D-46E5B30EAA6B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F4A29888-C215-4157-8650-B1769559AB38</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>98CAE18C-05EB-447F-9F83-C7B3E18510FE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>42332A16-989C-4658-A26D-F17131EA9D36</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -52,6 +88,8 @@
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -92,6 +130,76 @@
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>kubernetes ui</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Open the Kubernetes dashboard</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>F4A29888-C215-4157-8650-B1769559AB38</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>lsof -i tcp:8001 | grep kubectl | awk '{print $2}' | xargs kill
+kubectl proxy --port=8001 || true
+exit</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.terminalcommand</string>
+			<key>uid</key>
+			<string>98CAE18C-05EB-447F-9F83-C7B3E18510FE</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>seconds</key>
+				<string>5</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.delay</string>
+			<key>uid</key>
+			<string>42332A16-989C-4658-A26D-F17131EA9D36</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>http://127.0.0.1:8001/ui</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>6A9C202D-14CD-4369-929B-1948FBD6733B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -104,6 +212,27 @@
 			<key>ypos</key>
 			<integer>10</integer>
 		</dict>
+		<key>42332A16-989C-4658-A26D-F17131EA9D36</key>
+		<dict>
+			<key>xpos</key>
+			<integer>150</integer>
+			<key>ypos</key>
+			<integer>200</integer>
+		</dict>
+		<key>6A9C202D-14CD-4369-929B-1948FBD6733B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>210</integer>
+			<key>ypos</key>
+			<integer>240</integer>
+		</dict>
+		<key>98CAE18C-05EB-447F-9F83-C7B3E18510FE</key>
+		<dict>
+			<key>xpos</key>
+			<integer>210</integer>
+			<key>ypos</key>
+			<integer>120</integer>
+		</dict>
 		<key>CD3190E5-4166-40FE-B0A3-047147A24BF1</key>
 		<dict>
 			<key>xpos</key>
@@ -111,9 +240,16 @@
 			<key>ypos</key>
 			<integer>10</integer>
 		</dict>
+		<key>F4A29888-C215-4157-8650-B1769559AB38</key>
+		<dict>
+			<key>xpos</key>
+			<integer>10</integer>
+			<key>ypos</key>
+			<integer>120</integer>
+		</dict>
 	</dict>
 	<key>version</key>
-	<string>1.1.0</string>
+	<string>1.2.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/kennethlynne/alfred-kubernetes#readme</string>
 </dict>
