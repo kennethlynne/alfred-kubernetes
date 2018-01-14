@@ -21,6 +21,29 @@
 				<false/>
 			</dict>
 		</array>
+		<key>C150CA77-371A-46E6-A4E2-D2B7C6F1E31E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5F16E726-286B-46D8-B353-C5CCACB030FE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>835189F0-5D36-49DA-894D-265D473813AF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>CD3190E5-4166-40FE-B0A3-047147A24BF1</key>
 		<array>
 			<dict>
@@ -71,21 +94,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>kubectl port-forward {query}</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.terminalcommand</string>
-			<key>uid</key>
-			<string>01450581-90B1-427F-906D-46E5B30EAA6B</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -109,7 +117,7 @@
 				<key>runningsubtext</key>
 				<string>Fetching containers...</string>
 				<key>script</key>
-				<string>./node_modules/.bin/run-node index.js "$1"</string>
+				<string>./node_modules/.bin/run-node portforward/index.js "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -133,21 +141,15 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>kubernetes ui</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>Open the Kubernetes dashboard</string>
-				<key>withspace</key>
-				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>kubectl port-forward {query}</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
+			<string>alfred.workflow.action.terminalcommand</string>
 			<key>uid</key>
-			<string>F4A29888-C215-4157-8650-B1769559AB38</string>
+			<string>01450581-90B1-427F-906D-46E5B30EAA6B</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -165,6 +167,27 @@ exit</string>
 			<string>alfred.workflow.action.terminalcommand</string>
 			<key>uid</key>
 			<string>98CAE18C-05EB-447F-9F83-C7B3E18510FE</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>kubernetes ui</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Open the Kubernetes dashboard</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>F4A29888-C215-4157-8650-B1769559AB38</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -200,6 +223,97 @@ exit</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>context</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Fetching context</string>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node context/index.js "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Switch Kubernetes context</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>C150CA77-371A-46E6-A4E2-D2B7C6F1E31E</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string># kubectl config use-context {query}</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>5F16E726-286B-46D8-B353-C5CCACB030FE</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>"{query}" set as current context</string>
+				<key>title</key>
+				<string>Switched Kubernetes context</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>835189F0-5D36-49DA-894D-265D473813AF</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -219,6 +333,13 @@ exit</string>
 			<key>ypos</key>
 			<integer>200</integer>
 		</dict>
+		<key>5F16E726-286B-46D8-B353-C5CCACB030FE</key>
+		<dict>
+			<key>xpos</key>
+			<integer>210</integer>
+			<key>ypos</key>
+			<integer>370</integer>
+		</dict>
 		<key>6A9C202D-14CD-4369-929B-1948FBD6733B</key>
 		<dict>
 			<key>xpos</key>
@@ -226,12 +347,26 @@ exit</string>
 			<key>ypos</key>
 			<integer>240</integer>
 		</dict>
+		<key>835189F0-5D36-49DA-894D-265D473813AF</key>
+		<dict>
+			<key>xpos</key>
+			<integer>210</integer>
+			<key>ypos</key>
+			<integer>490</integer>
+		</dict>
 		<key>98CAE18C-05EB-447F-9F83-C7B3E18510FE</key>
 		<dict>
 			<key>xpos</key>
 			<integer>210</integer>
 			<key>ypos</key>
 			<integer>120</integer>
+		</dict>
+		<key>C150CA77-371A-46E6-A4E2-D2B7C6F1E31E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>10</integer>
+			<key>ypos</key>
+			<integer>370</integer>
 		</dict>
 		<key>CD3190E5-4166-40FE-B0A3-047147A24BF1</key>
 		<dict>

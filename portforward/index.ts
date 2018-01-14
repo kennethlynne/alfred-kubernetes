@@ -1,39 +1,15 @@
+import {
+  IContainer,
+  IPod,
+  IPort,
+} from './interfaces';
+
 const alfy = require('alfy');
-const alfredNotifier = require('alfred-notifier');
 import * as shelljs from 'shelljs';
-
-alfredNotifier();
-
-interface IItem {
-  arg: string;
-  autocomplete?: string;
-  subtitle: string;
-  title: string;
-  valid: boolean;
-}
-
-interface IPort {
-  containerPort: number;
-  protocol: string;
-}
-
-interface IPod {
-  metadata: {
-    name: string;
-  };
-  status: {
-    phase: string;
-  };
-  spec: {
-    containers: IContainer[];
-  };
-}
-
-interface IContainer {
-  name: string;
-  image: string;
-  ports: IPort[];
-}
+import '../shared';
+import {
+  IItem,
+} from '../common/alfred-interfaces';
 
 const filter: string = alfy.input.split(' ')[0];
 let mountPort: string = alfy.input.split(' ')[1] || '1337';

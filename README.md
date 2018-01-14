@@ -32,6 +32,11 @@ kubernetes ui
 ```
 Will run kubectl proxy and open the dashboard in the default browser
 
+```
+context
+```
+Will list available contexts and let you switch context
+
 ## License
 
 MIT © [Kenneth Lynne](http://kenneth.ly)
