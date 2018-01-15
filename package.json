@@ -21,7 +21,8 @@
     "build": "tsc",
     "test": "echo \"No tests configured\"",
     "pretest": "npm run lint",
-    "postinstall": "alfy-init",
+    "postinstall": "alfy-init && npm gief",
+    "gief": "gief editorconfig",
     "preuninstall": "alfy-cleanup",
     "lint": "tslint -c tslint.json \"{**}/*.ts*\"",
     "semantic-release": "semantic-release"
@@ -49,6 +50,8 @@
     "@types/node": "^9.3.0",
     "alfy-test": "^0.3.0",
     "condition-circle": "^2.0.1",
+    "gief": "^1.0.0",
+    "gief-editorconfig": "^1.0.0",
     "rimraf": "^2.6.2",
     "semantic-release": "^11.0.2",
     "tslint": "^5.9.1"
