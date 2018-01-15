@@ -16,17 +16,19 @@ $ npm i -g alfred-kubernetes
 
 ## Features
 
-__portforward__ *[name of pod]* *[port]*: List containers that expose a port and forward it
+__kube__: List of available commands
 
-![portforward name port](screenshots/portforward1.png "Port forward a pod on a designated port")
+![kube](screenshots/kube.png "Main menu")
 
-![portforward name port](screenshots/portforward2.png "Port forward a pod on a designated port")
+__kube portforward__ *[name of pod]* *[port]*: List containers that expose a port and forward it
 
-__kubernetes ui__: Will run kubectl proxy and open the dashboard in the default browser
+![portforward name port](screenshots/portforward.png "Port forward a pod on a designated port")
 
-__context__ *[name]*: List available contexts and let you switch between them
+__kube ui__: Will run kubectl proxy and open the dashboard in the default browser
 
-![context](screenshots/context1.png "Switch contexts easily")
+__kube context__ *[name]*: List available contexts and let you switch between them
+
+![context](screenshots/context.png "Switch contexts easily")
 
 ## License
 
