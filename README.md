@@ -1,4 +1,4 @@
-# alfred-kubernetes [![CircleCI](https://circleci.com/gh/kennethlynne/alfred-kubernetes/tree/master.svg?style=svg)](https://circleci.com/gh/kennethlynne/alfred-kubernetes/tree/master)
+# alfred-kubernetes [![CircleCI](https://circleci.com/gh/kennethlynne/alfred-kubernetes/tree/master.svg?style=svg)](https://circleci.com/gh/kennethlynne/alfred-kubernetes/tree/master) [![npm version](https://badge.fury.io/js/alfred-kubernetes.svg)](https://badge.fury.io/js/alfred-kubernetes) [![GitHub license](https://img.shields.io/github/license/kennethlynne/alfred-kubernetes.svg)](https://github.com/kennethlynne/alfred-kubernetes/blob/master/license)
 
 > Alfred workflow to manage a kubernetes cluster
 
