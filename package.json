@@ -21,7 +21,7 @@
     "build": "tsc",
     "test": "echo \"No tests configured\"",
     "pretest": "npm run lint",
-    "postinstall": "alfy-init && npm gief",
+    "postinstall": "alfy-init && npm run gief",
     "gief": "gief editorconfig",
     "preuninstall": "alfy-cleanup",
     "lint": "tslint -c tslint.json \"{**}/*.ts*\"",
