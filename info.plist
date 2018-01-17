@@ -104,7 +104,7 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>kubernetes</string>
+	<string>Kubernetes</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -450,7 +450,7 @@ exit</string>
 		</dict>
 	</dict>
 	<key>version</key>
-	<string>1.2.0</string>
+	<string>2.1.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/kennethlynne/alfred-kubernetes#readme</string>
 </dict>
