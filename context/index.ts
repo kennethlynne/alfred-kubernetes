@@ -5,7 +5,7 @@ import * as shelljs from 'shelljs';
 import {
   IContext,
 } from './interfaces';
-import '../shared';
+import '../common/shared';
 
 const filter: string = alfy.input.split(' ')[0];
 

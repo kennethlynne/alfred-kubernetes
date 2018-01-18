@@ -6,7 +6,7 @@ import {
 
 const alfy = require('alfy');
 import * as shelljs from 'shelljs';
-import '../shared';
+import '../common/shared';
 import {
   IItem,
 } from '../common/alfred-interfaces';
