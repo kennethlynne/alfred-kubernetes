@@ -15,32 +15,31 @@
   "engines": {
     "node": ">=7"
   },
+  "lint-staged": {
+    "*.{ts,js,json}": ["prettier --write", "git add"]
+  },
   "scripts": {
     "clean": "rimraf *.js",
     "prebuild": "npm run clean",
     "build": "tsc",
     "test": "echo \"No tests configured\"",
+    "lint-staged": "lint-staged",
     "pretest": "npm run lint",
+    "precommit": "lint-staged",
     "postinstall": "alfy-init",
     "preuninstall": "alfy-cleanup",
+    "autoformat": "prettier --write '**/*.{j,t}s*'",
     "lint": "tslint -c tslint.json \"{**}/*.ts*\"",
     "semantic-release": "semantic-release"
   },
-  "files": [
-    "index.js",
-    "icon.png",
-    "info.plist"
-  ],
-  "keywords": [
-    "alfred",
-    "workflow",
-    "alfy"
-  ],
+  "files": ["index.js", "icon.png", "info.plist"],
+  "keywords": ["alfred", "workflow", "alfy"],
   "dependencies": {
     "@types/shelljs": "^0.7.7",
     "alfred-notifier": "^0.2.3",
     "alfy": "^0.6.0",
     "kubernetes-client": "^3.17.2",
+    "lint-staged": "^7.0.0",
     "shelljs": "^0.8.0",
     "tslib": "1.8.0",
     "typescript": "2.6.2"
@@ -49,6 +48,7 @@
     "@types/node": "^9.3.0",
     "alfy-test": "^0.3.0",
     "condition-circle": "^2.0.1",
+    "husky": "^0.14.3",
     "rimraf": "^2.6.2",
     "semantic-release": "^11.0.2",
     "tslint": "^5.9.1"

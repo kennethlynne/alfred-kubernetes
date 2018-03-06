@@ -1,0 +1,5 @@
+*.js
+*.js.map
+package.json
+package-lock.json
+!wallaby.js

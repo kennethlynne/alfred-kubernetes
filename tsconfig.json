@@ -9,17 +9,10 @@
     "moduleResolution": "node",
     "sourceMap": true,
     "allowJs": false,
-    "lib": [
-      "dom",
-      "es5",
-      "scripthost",
-      "es2015.promise"
-    ],
+    "lib": ["dom", "es5", "scripthost", "es2015.promise"],
     "skipLibCheck": true,
     "experimentalDecorators": true
   },
   "compileOnSave": true,
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }
