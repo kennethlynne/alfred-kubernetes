@@ -41,7 +41,7 @@
     "kubernetes-client": "^3.17.2",
     "lint-staged": "^7.0.0",
     "shelljs": "^0.8.0",
-    "tslib": "1.8.0",
+    "tslib": "1.9.3",
     "typescript": "2.6.2"
   },
   "devDependencies": {
