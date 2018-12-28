@@ -3,7 +3,7 @@ jobs:
 
   danger:
     docker:
-      - image: circleci/ruby:2.3
+      - image: circleci/ruby:2.6
 
     working_directory: ~/repo
 
